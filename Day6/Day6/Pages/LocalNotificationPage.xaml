@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Day6.ViewModels;assembly=Day6"
+             x:Class="Day6.Pages.LocalNotificationPage">
+    <ContentPage.BindingContext>
+        <local:LocalNotificationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="10">
+                <Label Text="Local Notifications y Alertas"
+                       FontSize="Medium"
+                       FontAttributes="Bold" />
+                <Label Text="Alertas muestran una ventana en pantalla que contiene un titulo, un cuerpo (mensaje) y un boton. El texto de cada uno de estos elementos se puede personalizar"
+                       FontSize="Small" />
+                <Button Text="Click aqui para mostrarte una alerta simple"
+                        BackgroundColor="Gray"
+                        FontSize="Medium"
+                        TextColor="White"
+                        Command="{Binding SimpleAlertCommand}"
+                        HorizontalOptions="FillAndExpand" />
+                <Label Text="El segundo ejemplo muestra una alerta con dos opciones. Retorna true si escoges la opcion Ok y false la segunda opcion. El texto de ambas opciones es personalizable"
+                       FontSize="Small" />
+                <Button Text="Click aqui para mostrarte la alerta"
+                        BackgroundColor="Gray"
+                        FontSize="Medium"
+                        TextColor="White"
+                        Command="{Binding TwoOptionsAlertCommand}"
+                        HorizontalOptions="FillAndExpand" />
+                <Label Text="Este ejemplo muestra una lista de opciones como alerta. Retorna el valor en string de la opcion seleccionada por el usuario"
+                       FontSize="Small" />
+                <Button Text="Click aqui para mostrar opciones"
+                        BackgroundColor="Gray"
+                        FontSize="Medium"
+                        TextColor="White"
+                        Command="{Binding ActionSheetCommand}"
+                        HorizontalOptions="FillAndExpand" />
+                <Label Text="Este ejemplo muestra una lista de opciones como alerta pero con una opcion adicional para eliminar. Este ultimo aparece en un texto con diferente color."
+                       FontSize="Small" />
+                <Button Text="Click aqui para mostrar opciones"
+                        BackgroundColor="Gray"
+                        FontSize="Medium"
+                        TextColor="White"
+                        Command="{Binding ActionSheetWithDestructionCommand}"
+                        HorizontalOptions="FillAndExpand" />
+                <Label Text="Para finalizar, podemos programar una Local Notification  que se mostrara al usuario en determinado tiempo. En iOS, es necesario minimizar la ventana para poder ver la notificacion. (La notificacion se mostrara luego de 7 segundos de haber dado click en el boton)"
+                       FontSize="Small" />
+                <Button Text="Click me to send a local notification"
+                        BackgroundColor="Gray"
+                        FontSize="Medium"
+                        TextColor="White"
+                        Command="{Binding LocalNotificationCommand}"
+                        HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
