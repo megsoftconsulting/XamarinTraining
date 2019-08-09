@@ -19,5 +19,10 @@ namespace Day6
         {
             Navigation.PushAsync(new LocalNotificationPage());
         }
+
+        private void LocalizationButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TranslationPage());
+        }
     }
 }

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="TitleLabel" xml:space="preserve">
+        <value>El Cuervo</value>
+    </data>
+    <data name="ContentLabel" xml:space="preserve">
+        <value>Una vez, al filo de una lúgubre media noche, mientras débil y cansado, en tristes reflexiones embebido, inclinado sobre un viejo y raro libro de olvidada ciencia, cabeceando, casi dormido, oyóse de súbito un leve golpe, como si suavemente tocaran, tocaran a la puerta de mi cuarto. “Es —dije musitando— un visitante tocando quedo a la puerta de mi cuarto. Eso es todo, y nada más.”</value>
+    </data>
+</root>
