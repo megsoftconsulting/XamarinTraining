@@ -36,6 +36,7 @@ namespace Day6.ViewModels
                     }
                     else
                     {
+
                         // Si presionas la opcion "No"
                         Device.BeginInvokeOnMainThread(() =>
                         Application.Current.MainPage.DisplayAlert("Tu titulo aqui", "Presionaste No", "Ok"));
