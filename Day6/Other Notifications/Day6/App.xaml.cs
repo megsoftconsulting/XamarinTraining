@@ -3,6 +3,7 @@ using Day6.Helpers;
 using Day6.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Com.OneSignal;
 
 namespace Day6
 {
@@ -24,6 +25,9 @@ namespace Day6
                 BarBackgroundColor = Color.Gray,
                 BarTextColor = Color.White
             };
+            // Have fun with this ID on Android
+            // iOS configuration can be found here: https://xamarinlatino.com/xamarin-forms-onesignal-series-ios-c994914b5139
+            OneSignal.Current.StartInit("23e84f52-7985-485e-992a-8a935e4d910a").EndInit();
         }
 
         protected override void OnStart()

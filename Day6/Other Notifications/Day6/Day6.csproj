@@ -13,6 +13,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
+    <PackageReference Include="Com.OneSignal" Version="3.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
