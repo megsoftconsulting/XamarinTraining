@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Day7.Pages.SwipeGesturePage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Descripcion" FontSize="Title" FontAttributes="Bold" />
+            <Label Text="Swipe Gestures identifican cuando un usuario se desliza sobre un control. Este puede ser identificado en las 4 direcciones: Arriba, Abajo, Izquierda y derecha."
+                       FontSize="Small" />
+            <Label Text="Ejemplo" FontSize="Subtitle" FontAttributes="Bold" />
+            <Label Text="Swipe Arriba: Cambia a color Azul&#13;Swipe Abajo: Cambia a color Negro&#13;Swipe a la Izquierda: Cambia a color Rojo&#13;Swipe a la Derecha: Cambia a color Naranja"
+                       FontSize="Small" />
+            <BoxView x:Name="boxView" BackgroundColor="Blue" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                <BoxView.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipped" />
+                    <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipped" />
+                    <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipped" />
+                    <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -7,11 +7,13 @@ namespace Day7
 {
     public partial class App : Application
     {
+        public static double ScreenWidth = Xamarin.Essentials.DeviceDisplay.MainDisplayInfo.Width;
+        public static double ScreenHeight = Xamarin.Essentials.DeviceDisplay.MainDisplayInfo.Height;
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TriggersPage())
+            MainPage = new NavigationPage(new GesturesPage())
             {
                 BarBackgroundColor = Color.Gray,
                 BarTextColor = Color.White

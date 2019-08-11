@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Day7.Pages.GesturesPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Padding="20">
+                <Label Text="Gestures Recognizers" FontAttributes="Bold" FontSize="Title" />
+                <Label Text="Tap Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="TapGestureSample_Clicked" />
+                <Label Text="Pinch Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Text="Usualmente se usa para poder hacer zoom in y zoom outs de views. Ejemplo: Imagenes, documentos, etc." FontSize="Body" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="PinchGestureSample_Clicked" />
+                <Label Text="Pan Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Text="Usualmente se usa para hacer un paneo en una view. Ejemplo: Imagenes, mapas, etc." FontSize="Body" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="PanGestureSample_Clicked" />
+                <Label Text="Swipe Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="SwipeGestureSample_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

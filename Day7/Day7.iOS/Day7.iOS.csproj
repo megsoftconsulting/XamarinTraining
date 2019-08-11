@@ -110,6 +110,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\waterfront.imageset\waterfront%403x.jpg" />
+    <ImageAsset Include="Assets.xcassets\waterfront.imageset\waterfront%402x.jpg" />
+    <ImageAsset Include="Assets.xcassets\waterfront.imageset\waterfront.jpg" />
+    <ImageAsset Include="Assets.xcassets\waterfront.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\MonoMonkey.imageset\MonoMonkey%403x.jpg" />
+    <ImageAsset Include="Assets.xcassets\MonoMonkey.imageset\MonoMonkey%402x.jpg" />
+    <ImageAsset Include="Assets.xcassets\MonoMonkey.imageset\MonoMonkey.jpg" />
+    <ImageAsset Include="Assets.xcassets\MonoMonkey.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,5 +141,10 @@
       <Project>{ED529144-F757-445B-9DB4-214AA04003A5}</Project>
       <Name>Day7</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\waterfront.jpg" />
+    <BundleResource Include="Resources\waterfront%402x.jpg" />
+    <BundleResource Include="Resources\MonoMonkey.jpg" />
   </ItemGroup>
 </Project>

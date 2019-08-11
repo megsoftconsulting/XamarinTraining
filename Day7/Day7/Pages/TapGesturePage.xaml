@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="this"
+    x:Class="Day7.Pages.TapGesturePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Padding="20">
+                <Label Text="Descripcion" FontSize="Title" FontAttributes="Bold" />
+                <Label Text="Los Tap Gestures son usados para identificar cuando el usuario hace Tap en algun elemento de Xamarin Forms. Esto nos permite extender ciertas funcionalides o efectos visuales en nuestro UI."
+                       FontSize="Small" />
+                <Label Text="Ejemplo 1" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="Generalmente se usa en elementos que no poseen un evento Clicked pero no se limita unicamente a esto."
+                       FontSize="Small" />
+                <Label x:Name="label1" FontSize="Subtitle" Text="He sido presionado 0 veces">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTappedLabel1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Ejemplo 2" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="Tambien podemos definir que el evento Tapped o el Command se ejecute luego de una cantidad de Taps"
+                       FontSize="Small" />
+                <Label x:Name="label2" FontSize="Subtitle" Text="He sido ejecutado 0 veces despues de 2 taps">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnTappedLabel2" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Ejemplo 3" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="Hablando de Commands. Podemos hacer Binding de un Command en nuestro ViewModel/Model"
+                       FontSize="Small" />
+                <Label FontSize="Subtitle" Text="Tap me!">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Command, Source={x:Reference this}}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
