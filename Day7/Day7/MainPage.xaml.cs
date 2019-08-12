@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Day7.Pages;
 using Xamarin.Forms;
 
 namespace Day7
@@ -16,6 +13,21 @@ namespace Day7
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Triggers_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TriggersPage());
+        }
+
+        private void Gestures_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GesturesPage());
+        }
+
+        private void Effects_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EffectsPage());
         }
     }
 }

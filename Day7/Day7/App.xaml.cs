@@ -1,7 +1,5 @@
-﻿using System;
-using Day7.Pages;
+﻿using Day7.Pages;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Day7
 {
@@ -13,7 +11,7 @@ namespace Day7
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new GesturesPage())
+            MainPage = new NavigationPage(new MainPage())
             {
                 BarBackgroundColor = Color.Gray,
                 BarTextColor = Color.White

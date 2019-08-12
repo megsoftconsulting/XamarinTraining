@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    Title="Effects"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Day7.Helpers;assembly=Day7"
+    x:Class="Day7.Pages.EffectsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label FontAttributes="Bold" FontSize="Subtitle" Text="Descripcion" />
+            <Label FontSize="Body" Text="Effects en Xamarin Forms son una manera sencilla de poder aplicar diferentes efectos correspondientes a cada plataforma y asi poder enriquecer un control en Xamarin Forms" />
+            <Label FontSize="Body" Text="En este ejemplo, se procede a realizar un FocusEffect el cual permite cambiar el BackgroundColor de un Entry cada vez que se haga Focus en el." />
+            <Entry Text="Effect attached to an Entry">
+                <Entry.Effects>
+                    <local:FocusEffect />
+                </Entry.Effects>
+            </Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
