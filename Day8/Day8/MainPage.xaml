@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Title="Home" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Day8.MainPage">
+    <StackLayout Padding="20">
+        <!-- Place new controls here -->
+        <Button Text="Dependency Service" BackgroundColor="Gray" TextColor="White" Clicked="Dependency_Clicked" />
+        <Button Text="Custom Renderers" BackgroundColor="Gray" TextColor="White" Clicked="CustomRenderers_Clicked" />
+        <Button Text="Behaviors" BackgroundColor="Gray" TextColor="White" Clicked="Behaviors_Clicked" />
+    </StackLayout>
+</ContentPage>

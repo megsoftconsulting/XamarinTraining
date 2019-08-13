@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Dependency Service" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Day8.Pages.DependencyServicePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="15">
+                <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Text="En ocasiones, Xamarin Forms no provee acceso a todas las API de plataforma que necesitamos. Con Dependency Service podemos hacer una definicion (interfaz) de lo que requerimos" FontSize="Body" />
+                <Label Text="Ejemplo 1" FontAttributes="Bold" FontSize="Caption" />
+                <Label Text="El siguiente ejemplo hara que nuestra interfaz IDevice obtenga la informacion de la orientacion actual del dispositivo. Dependiendo del OS, se ejecutara el codigo correspiente." FontSize="Body" />
+                <Button VerticalOptions="Center" Text="Click me!" BackgroundColor="Gray" TextColor="White" Clicked="Device_Clicked" />
+                <Label Text="Ejemplo 2" FontAttributes="Bold" FontSize="Caption" />
+                <Label Text="El siguiente ejemplo hara podremos abrir el Photo Picker del Device. Tomar en cuenta que podra requerir permisos del usuario." FontSize="Body" />
+                <Button VerticalOptions="Center" Text="Click me!" BackgroundColor="Gray" TextColor="White" Clicked="Picker_Clicked" />
+                <Image x:Name="image" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="200" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
