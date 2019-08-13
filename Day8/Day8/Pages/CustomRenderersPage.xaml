@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Custom Renderers"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Day8.Controls"
+             x:Class="Day8.Pages.CustomRenderersPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
+            <Label Text="Un Custom Renderer es una implmentacion custom de un elemento de Xamarin Forms de manera que tienes acceso a personalizar un Control de Xamarin Forms." FontSize="Body" />
+            <Label Text="Un ejemplo simple es modificaar el comportamiento de un Entry:" FontSize="Body" />
+            <Entry Placeholder="Un Entry normal" />
+            <local:MyEntry Placeholder="Este Entry tiene Color desde el custom Renderer" />
+            <local:FlatEntry Placeholder="Esto es un Flat Entry" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

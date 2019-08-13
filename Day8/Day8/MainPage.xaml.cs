@@ -26,7 +26,7 @@ namespace Day8
 
         private void CustomRenderers_Clicked(object sender, EventArgs e)
         {
-            
+            Navigation.PushAsync(new CustomRenderersPage());
         }
 
         private void Behaviors_Clicked(object sender, EventArgs e)
