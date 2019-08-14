@@ -3,6 +3,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Day8.Controls"
+             BackgroundColor="White"
              x:Class="Day8.Pages.CustomRenderersPage">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="15">

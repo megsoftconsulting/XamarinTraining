@@ -68,6 +68,7 @@
     <Compile Include="Dependencies\Device.cs" />
     <Compile Include="Controls\MyEntryRenderer.cs" />
     <Compile Include="Controls\FlatEntryRenderer.cs" />
+    <Compile Include="LabelShadowEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

@@ -31,7 +31,7 @@ namespace Day8
 
         private void Behaviors_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new BehaviorsPage());
         }
     }
 }

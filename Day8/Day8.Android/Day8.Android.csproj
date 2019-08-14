@@ -69,6 +69,7 @@
     <Compile Include="Dependencies\Device.cs" />
     <Compile Include="Controls\FlatEntryRenderer.cs" />
     <Compile Include="Controls\MyEntryRenderer.cs" />
+    <Compile Include="LabelShadowEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

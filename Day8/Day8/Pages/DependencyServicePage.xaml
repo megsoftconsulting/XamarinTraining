@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage Title="Dependency Service" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Day8.Pages.DependencyServicePage">
+<ContentPage
+    Title="Dependency Service"
+    BackgroundColor="White"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Day8.Pages.DependencyServicePage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20" Spacing="15">
