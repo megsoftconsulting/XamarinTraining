@@ -14,14 +14,6 @@
                 <Label Text="Ejemplo 1" FontSize="Caption" FontAttributes="Bold" />
                 <Label Text="En este ejemplo, agregamos un behavior que valida si el texto ingrado en el Entry un valor valido Double" FontSize="Body" />
                 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="true" />
-                <Label Text="Ejemplo 2" FontSize="Caption" FontAttributes="Bold" />
-                <Label Text="En este ejemplo hemos agregado dos propiedades: Group y Name; Estas nos permiten buscar el grupo y el nombre de un Effect que hayamos definido (LabelShadowEffect)" FontSize="Body" />
-                <Label Text="Nota: en este caso estamos agregando el Behavior como un elemento a la collecion Behaviors del control. Podemos agregar los Behaviors que requiramos a un control." FontSize="Body" />
-                <Label Text="Label Shadow Effect">
-                    <Label.Behaviors>
-                        <local:EffectBehavior Group="Xamarin" Name="LabelShadowEffect" />
-                    </Label.Behaviors>
-                </Label>
                 <Label Text="Nota (Avanzado): En aplicaciones avanzadas, un ListView en una arquitectura MVVM no puede comunicarse directamente con nuestro VM debido a que no posee un evento Bindable que nos permita enviar parametros desde la View a nuestro ViewModel. Se ha solucionado esto usando EventToCommandBehavior el cual permite enlazar el evento ItemTapped a nuestro ViewModel. Mas informacion:" FontSize="Small" />
                 <Label Text="Click Aqui para conocer mas sobre este behavior!" FontAttributes="Bold" FontSize="Small">
                     <Label.GestureRecognizers>
