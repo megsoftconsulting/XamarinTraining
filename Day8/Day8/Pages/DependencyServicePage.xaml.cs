@@ -11,6 +11,10 @@ namespace Day8.Pages
         public DependencyServicePage()
         {
             InitializeComponent();
+
+            var deviceType = DependencyService.Get<IDeviceTypeService>();
+
+            lblDeviceType.Text = deviceType.GetDeviceType();
         }
 
         private void Device_Clicked(object sender, EventArgs e)

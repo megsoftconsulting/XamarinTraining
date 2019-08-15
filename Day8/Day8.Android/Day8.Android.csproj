@@ -70,6 +70,8 @@
     <Compile Include="Controls\FlatEntryRenderer.cs" />
     <Compile Include="Controls\MyEntryRenderer.cs" />
     <Compile Include="LabelShadowEffect.cs" />
+    <Compile Include="Dependencies\AndroidDeviceTypeService.cs" />
+    <Compile Include="Controls\UniversalButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

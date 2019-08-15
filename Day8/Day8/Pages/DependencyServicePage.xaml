@@ -7,6 +7,14 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20" Spacing="15">
+
+
+                <Label
+                    x:Name="lblDeviceType"
+                    FontSize="Large" HorizontalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"></Label>
+
+
                 <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
                 <Label Text="En ocasiones, Xamarin Forms no provee acceso a todas las API de plataforma que necesitamos. Con Dependency Service podemos hacer una definicion (interfaz) de lo que requerimos" FontSize="Body" />
                 <Label Text="Ejemplo 1" FontAttributes="Bold" FontSize="Caption" />

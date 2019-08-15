@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(FlatEntry), typeof(FlatEntryRenderer))]
+
 namespace Day8.iOS.Controls
 {
     public class FlatEntryRenderer : EntryRenderer
