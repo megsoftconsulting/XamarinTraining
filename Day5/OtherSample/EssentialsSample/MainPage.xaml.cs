@@ -22,7 +22,7 @@ namespace EssentialsSample
             Connectivity.ConnectivityChanged += OnConnectivityChanged;
             Accelerometer.ShakeDetected += Accelerometer_ShakeDetected;
 
-            if (!Accelerometer.IsMonitoring)
+            if (Xamarin.Essentials.DeviceInfo.DeviceType != DeviceType.Virtual && !Accelerometer.IsMonitoring)
                 Accelerometer.Start(SensorSpeed.UI);
 
         }
