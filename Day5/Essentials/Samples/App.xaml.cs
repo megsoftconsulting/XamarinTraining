@@ -1,16 +1,9 @@
-﻿using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter.Distribute;
-using Samples.Helpers;
-using Samples.View;
+﻿using Samples.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Device = Xamarin.Forms.Device;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-
 namespace Samples
 {
     public partial class App : Application
@@ -19,12 +12,6 @@ namespace Samples
         {
             InitializeComponent();
 
-            // Enable currently experimental features
-            ExperimentalFeatures.Enable(
-                ExperimentalFeatures.EmailAttachments,
-                ExperimentalFeatures.ShareFileRequest,
-                ExperimentalFeatures.OpenFileRequest);
-
             VersionTracking.Track();
 
             MainPage = new NavigationPage(new HomePage());
@@ -32,18 +19,7 @@ namespace Samples
 
         protected override void OnStart()
         {
-            if ((Device.RuntimePlatform == Device.Android && CommonConstants.AppCenterAndroid != "AC_ANDROID") ||
-               (Device.RuntimePlatform == Device.iOS && CommonConstants.AppCenteriOS != "AC_IOS") ||
-               (Device.RuntimePlatform == Device.UWP && CommonConstants.AppCenterUWP != "AC_UWP"))
-            {
-                AppCenter.Start(
-                $"ios={CommonConstants.AppCenteriOS};" +
-                $"android={CommonConstants.AppCenterAndroid};" +
-                $"uwp={CommonConstants.AppCenterUWP}",
-                typeof(Analytics),
-                typeof(Crashes),
-                typeof(Distribute));
-            }
+            // Handle when your app starts
         }
 
         protected override void OnSleep()
