@@ -4,15 +4,13 @@
         <Button
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Center"
-            Text="Probar conexión"
-            Clicked="Handle_Clicked"
-            ></Button>
+            Text="Test connection"
+            Clicked="Handle_Clicked" />
 
         <Button HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center"
-                Text="Obtener coordenadas"
-                Clicked="Handle_Clicked2"
-                ></Button>
+                Text="Get coordinates"
+                Clicked="Handle_Clicked2" />
         <Label
             FontSize="Large"
             HorizontalTextAlignment="Center"
@@ -21,7 +19,7 @@
             VerticalOptions="EndAndExpand"
             HorizontalOptions="FillAndExpand"
             Opacity="0"
-            Text="Perdiste la conexíon a internet"
-            x:Name="labelAlert"/>
+            Text="You lost your Internet connection"
+            x:Name="LabelAlert" />
     </StackLayout>
 </ContentPage>

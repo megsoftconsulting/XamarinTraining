@@ -80,10 +80,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter" Version="1.13.0" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.13.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.13.0" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="1.13.0" />
     <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.0" />
     <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
