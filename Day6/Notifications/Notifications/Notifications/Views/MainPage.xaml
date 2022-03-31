@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notifications.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button Text="ActivityIndicator" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="ActivityIndicator_Clicked" />
+            <Button Text="Alerts" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="Alerts_Clicked" />
+            <Button Text="Local Notifications" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="LocalNotifications_Clicked" />
+            <Button Text="Toast" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="Toast_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
