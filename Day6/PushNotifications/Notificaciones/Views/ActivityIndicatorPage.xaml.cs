@@ -14,7 +14,7 @@ namespace Notificaciones.Views
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
-            activityIndicator.IsRunning = !activityIndicator.IsRunning;
+            ActivityIndicator.IsRunning = !ActivityIndicator.IsRunning;
         }
     }
 }
