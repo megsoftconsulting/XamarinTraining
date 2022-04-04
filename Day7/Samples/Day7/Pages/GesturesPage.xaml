@@ -5,15 +5,14 @@
             <StackLayout Spacing="15" Padding="20">
                 <Label Text="Gestures Recognizers" FontAttributes="Bold" FontSize="Title" />
                 <Label Text="Tap Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
-                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="TapGestureSample_Clicked" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Go to sample" Clicked="TapGestureSample_Clicked" />
                 <Label Text="Pinch Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Text="Usualmente se usa para poder hacer zoom in y zoom outs de views. Ejemplo: Imagenes, documentos, etc." FontSize="Body" />
-                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="PinchGestureSample_Clicked" />
+                <Label Text="Usually this is used to be able to zoom in and zoom out views like images documents, etc." FontSize="Body" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Go to sample" Clicked="PinchGestureSample_Clicked" />
                 <Label Text="Pan Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Text="Usualmente se usa para hacer un paneo en una view. Ejemplo: Imagenes, mapas, etc." FontSize="Body" />
-                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="PanGestureSample_Clicked" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Go to sample" Clicked="PanGestureSample_Clicked" />
                 <Label Text="Swipe Gesture Recognizer" FontAttributes="Bold" FontSize="Subtitle" />
-                <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Ejemplo" Clicked="SwipeGestureSample_Clicked" />
+                <Button BackgroundColor="Gray" TextColor="White" Text="Go to sample" Clicked="SwipeGestureSample_Clicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

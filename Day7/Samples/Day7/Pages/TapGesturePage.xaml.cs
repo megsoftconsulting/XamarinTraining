@@ -18,18 +18,18 @@ namespace Day7.Pages
         private void OnTappedLabel1(object sender, EventArgs e)
         {
             _label1Count++;
-            label1.Text = $"He sido presionado {_label1Count} veces";
+            Label1.Text = $"I have been tapped {_label1Count} times";
         }
 
         private void OnTappedLabel2(object sender, EventArgs e)
         {
             _label2Count++;
-            label2.Text = $"He sido ejecutado {_label2Count} veces luego de 2 taps";
+            Label2.Text = $"I have been executed {_label2Count} times after 2 taps";
         }
 
         private void OnCommandTapped()
         {
-            DisplayAlert("Tap", "Fui lanzado desde el Command del Tap Gesture Recognizer", "Ok");
+            DisplayAlert("Tap", "Executed from a command in a Tap Gesture Recognizer", "Ok");
         }
     }
 }

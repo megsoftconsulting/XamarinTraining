@@ -14,15 +14,15 @@ namespace Day7.Pages
             InitializeComponent();
         }
 
-        void OnPinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
+        private void OnPinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
         {
             if (e.Status == GestureStatus.Started)
             {
                 // Store the current scale factor applied to the wrapped user interface element,
                 // and zero the components for the center point of the translate transform.
-                startScale = image.Scale;
-                image.AnchorX = 0;
-                image.AnchorY = 0;
+                startScale = Image.Scale;
+                Image.AnchorX = 0;
+                Image.AnchorY = 0;
             }
             if (e.Status == GestureStatus.Running)
             {
@@ -32,34 +32,34 @@ namespace Day7.Pages
 
                 // The ScaleOrigin is in relative coordinates to the wrapped user interface element,
                 // so get the X pixel coordinate.
-                double renderedX = image.X + xOffset;
+                double renderedX = Image.X + xOffset;
                 double deltaX = renderedX / Width;
-                double deltaWidth = Width / (image.Width * startScale);
+                double deltaWidth = Width / (Image.Width * startScale);
                 double originX = (e.ScaleOrigin.X - deltaX) * deltaWidth;
 
                 // The ScaleOrigin is in relative coordinates to the wrapped user interface element,
                 // so get the Y pixel coordinate.
-                double renderedY = image.Y + yOffset;
+                double renderedY = Image.Y + yOffset;
                 double deltaY = renderedY / Height;
-                double deltaHeight = Height / (image.Height * startScale);
+                double deltaHeight = Height / (Image.Height * startScale);
                 double originY = (e.ScaleOrigin.Y - deltaY) * deltaHeight;
 
                 // Calculate the transformed element pixel coordinates.
-                double targetX = xOffset - (originX * image.Width) * (currentScale - startScale);
-                double targetY = yOffset - (originY * image.Height) * (currentScale - startScale);
+                double targetX = xOffset - (originX * Image.Width) * (currentScale - startScale);
+                double targetY = yOffset - (originY * Image.Height) * (currentScale - startScale);
 
                 // Apply translation based on the change in origin.
-                image.TranslationX = targetX.Clamp(-image.Width * (currentScale - 1), 0);
-                image.TranslationY = targetY.Clamp(-image.Height * (currentScale - 1), 0);
+                Image.TranslationX = targetX.Clamp(-Image.Width * (currentScale - 1), 0);
+                Image.TranslationY = targetY.Clamp(-Image.Height * (currentScale - 1), 0);
 
                 // Apply scale factor.
-                image.Scale = currentScale;
+                Image.Scale = currentScale;
             }
             if (e.Status == GestureStatus.Completed)
             {
                 // Store the translation delta's of the wrapped user interface element.
-                xOffset = image.TranslationX;
-                yOffset = image.TranslationY;
+                xOffset = Image.TranslationX;
+                yOffset = Image.TranslationY;
             }
         }
     }

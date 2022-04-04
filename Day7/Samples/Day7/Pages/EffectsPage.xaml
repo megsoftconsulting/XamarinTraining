@@ -7,9 +7,9 @@
     x:Class="Day7.Pages.EffectsPage">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="15">
-            <Label FontAttributes="Bold" FontSize="Subtitle" Text="Descripcion" />
-            <Label FontSize="Body" Text="Effects en Xamarin Forms son una manera sencilla de poder aplicar diferentes efectos correspondientes a cada plataforma y asi poder enriquecer un control en Xamarin Forms" />
-            <Label FontSize="Body" Text="En este ejemplo, se procede a realizar un FocusEffect el cual permite cambiar el BackgroundColor de un Entry cada vez que se haga Focus en el." />
+            <Label FontAttributes="Bold" FontSize="Subtitle" Text="Description" />
+            <Label FontSize="Body" Text="Effects in Xamarin Forms are a simple way to apply different effects that belongs to each platform to enrich a control in Xamarin Forms." />
+            <Label FontSize="Body" Text="In this sample, We are going to apply a FocusEffect that allows to change the BackgroundColor of an Entry each time It's being focused." />
             <Entry Text="Effect attached to an Entry">
                 <Entry.Effects>
                     <local:FocusEffect />

@@ -5,7 +5,7 @@
     Title="Pinch Gesture Recognizer"
     x:Class="Day7.Pages.PinchGesturePage">
     <ContentPage.Content>
-        <Image x:Name="image" Source="waterfront.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image x:Name="Image" Source="waterfront.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image.GestureRecognizers>
                 <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
             </Image.GestureRecognizers>

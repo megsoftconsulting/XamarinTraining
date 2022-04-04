@@ -19,16 +19,16 @@ namespace Day7.Pages
             {
                 case GestureStatus.Running:
                     // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
-                    image.TranslationX =
-                      Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(image.Width - App.ScreenWidth));
-                    image.TranslationY =
-                      Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(image.Height - App.ScreenHeight));
+                    Image.TranslationX =
+                      Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Image.Width - App.ScreenWidth));
+                    Image.TranslationY =
+                      Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Image.Height - App.ScreenHeight));
                     break;
 
                 case GestureStatus.Completed:
                     // Store the translation applied during the pan
-                    x = image.TranslationX;
-                    y = image.TranslationY;
+                    x = Image.TranslationX;
+                    y = Image.TranslationY;
                     break;
             }
         }
