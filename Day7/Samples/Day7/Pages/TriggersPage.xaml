@@ -12,38 +12,36 @@
         <ScrollView>
             <StackLayout Spacing="10" Padding="20">
                 <Label Text="Property Triggers" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Los Property Triggers son usados para cambiar la propiedad de un control de acuerdo a un valor especifico de otra propiedad"
+                <Label Text="Property triggers are used to change a property in an element according to a condition from another property"
                        />
-                <Label Text="En el siguiente ejemplo, la propiedad Background Color puede cambiar en un Entry al momento que la propiedad Text sea igual a un string especifico (Xamarin, en este caso)"
-                 />
+                <Label Text="In the following sample, a Backrgound Color property changed when the Text property from a Entry is equal to an specific string value (in this case: Xamarin)" />
 
-                <Entry Placeholder="Inserta tu nombre" BackgroundColor="BlueViolet">
+                <Entry Placeholder="Insert your name" BackgroundColor="BlueViolet">
                     <Entry.Triggers>
-                        <Trigger TargetType="Entry" Property="Text" Value="Hola">
+                        <Trigger TargetType="Entry" Property="Text" Value="Xamarin">
                             <Setter Property="BackgroundColor" Value="Green" />
                         </Trigger>
                     </Entry.Triggers>
                 </Entry>
 
                 <Label Text="Data Triggers" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Son similares a los Property Triggers excepto que en lugar de especifcar una propiedad en el control, pueden enlazarse a un Binding Property." />
-                <Label Text="Esto nos permite enlazarnos entre propiedades de controles o propiedades de un ViewModel/Model"
+                <Label Text="They are similar to property triggers except that instead of specify a property within the element, It can be bound to a Binding Property." />
+                <Label Text="This allow us to bind the trigger to properties between controls or ViewModels/Models"
                        />
-                <Label Text="Ejemplo 1: El campo del Primer Apellido unicamente estara disponible si el campo del Primer Nombre contiene informacion"
-                       />
-                <Entry Placeholder="Primer Nombre" x:Name="nameEntry" Text="" />
-                <Entry Placeholder="Primer Apellido">
+                <Label Text="Sample 1: The field Last Name will only be available if the First Name contains information" />
+                <Entry Placeholder="First Name" x:Name="NameEntry" Text="" />
+                <Entry Placeholder="Your last name">
                     <Entry.Triggers>
                         <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference nameEntry},
+                                     Binding="{Binding Source={x:Reference NameEntry},
                                      Path=Text.Length}"
                                      Value="0">
                             <Setter Property="IsEnabled" Value="False" />
                         </DataTrigger>
                     </Entry.Triggers>
                 </Entry>
-                <Label Text="Ejemplo 2: El campo Nombre (que esta vinculado al ViewModel de esta pagina) activa un Label al momento de que esta propiedad contiene informacion" />
-                <Entry Placeholder="Nombre" Text="{Binding Name}" />
+                <Label Text="Sample 2: The field name (which is bound to this page's ViewModel), will display a label when the Name property contains a value" />
+                <Entry Placeholder="Name" Text="{Binding Name}" />
                 <Label Text="{Binding Name, StringFormat='Good morning {0}'}">
                     <Label.Triggers>
                         <DataTrigger TargetType="Label" Binding="{Binding Name}" Value="">
@@ -52,8 +50,7 @@
                     </Label.Triggers>
                 </Label>
                 <Label Text="Event Triggers" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Los Event Triggers se ejecutan cuando un evento en un control ocurre. Por ejemplo, podriamos hacer que un boton tenga una animacion ocurra cuando el usuario le da click a un boton"
-                        />
+                <Label Text="Event Triggers are executed when a event from a element triggers. For example: We can make a button to have a animation when the user clicks a button." />
                 <Button Text="Click me!" BackgroundColor="Gray" TextColor="White">
                     <Button.Triggers>
                         <EventTrigger Event="Clicked">
@@ -62,20 +59,20 @@
                     </Button.Triggers>
                 </Button>
                 <Label Text="Multi Triggers" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Es una version avanzada de Data Triggers. Podemos enlazar multiples condiciones para poder realizar una accion. Un ejemplo podria ser: habilitar un boton cuando el usuario haya ingresado su usuario (Xamarin) y contrase&#x00F1;a (1234)"
+                <Label Text="This is the advance version of Data Triggers. We can bind multiple conditions to execute an action. For example: enable a button when the user inserts a specific username (Xamarin) and password (1234)"
                     />
-                <Entry x:Name="emailEntry" Placeholder="Insert a username" Text="" />
-                <Entry x:Name="passwordEntry" Placeholder="Inserta tu contrase&#x00F1;a" IsPassword="True" Text="" />
+                <Entry x:Name="EmailEntry" Placeholder="Insert a username" Text="" />
+                <Entry x:Name="PasswordEntry" Placeholder="Insert your password" IsPassword="True" Text="" />
                 <Button IsEnabled="False" Text="Click me!" BackgroundColor="Gray" TextColor="White">
                     <Button.Triggers>
                         <MultiTrigger TargetType="Button">
                             <MultiTrigger.Conditions>
-                                <BindingCondition Binding="{Binding Source={x:Reference emailEntry}, Path=Text}" Value="Xamarin" />
-                                <BindingCondition Binding="{Binding Source={x:Reference passwordEntry}, Path=Text}" Value="1234" />
+                                <BindingCondition Binding="{Binding Source={x:Reference EmailEntry}, Path=Text}" Value="Xamarin" />
+                                <BindingCondition Binding="{Binding Source={x:Reference PasswordEntry}, Path=Text}" Value="1234" />
                             </MultiTrigger.Conditions>
                             <Setter Property="IsEnabled" Value="True" />
                         </MultiTrigger>
-                        <!-- Agreguemos la animacion al evento clicked. Con esto demostramos que podemos combinar diferentes triggers en un control -->
+                        <!--Let's add a Event Trigger to the clicked event. In this way, We can combine different triggers to a control -->
                         <!--
                         <EventTrigger Event="Clicked">
                             <helpers:ExpandButtonTriggerAction />

@@ -11,16 +11,16 @@ namespace Day7.iOS.PlatformSpecific
 {
     public class FocusEffect : PlatformEffect
     {
-        UIColor backgroundColor;
+        private UIColor _backgroundColor;
         protected override void OnAttached()
         {
             try
             {
-                Control.BackgroundColor = backgroundColor = UIColor.FromRGB(204, 0, 0); //153, 255);
+                Control.BackgroundColor = _backgroundColor = UIColor.FromRGB(204, 0, 0); //153, 255);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+                Console.WriteLine("Cannot set property on attached control. Error: {0}", ex.Message);
             }
         }
 
@@ -34,26 +34,17 @@ namespace Day7.iOS.PlatformSpecific
 
             try
             {
-                if (args.PropertyName == "IsFocused")
-                {
-                    if (Control.BackgroundColor == backgroundColor)
-                    {
-                        Control.BackgroundColor = UIColor.White;
-                    }
-                    else
-                    {
-                        Control.BackgroundColor = backgroundColor;
-                    }
+                if (args.PropertyName != "IsFocused") return;
+                Control.BackgroundColor = Control.BackgroundColor != null && Control.BackgroundColor.Equals(_backgroundColor) ? UIColor.White : _backgroundColor;
                     
-                    if (Control is UITextField)
-                    {
-                        (Control as UITextField).Text = "Eres un millonario";
-                    }
+                if (Control is UITextField field)
+                {
+                    field.Text = "This is iOS";
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+                Console.WriteLine("Cannot set property on attached control. Error: {0}", ex.Message);
             }
         }
     }

@@ -9,20 +9,20 @@ namespace Day7.Droid.PlatformSpecific
 {
     public class FocusEffect : PlatformEffect
     {
-        Android.Graphics.Color originalBackgroundColor = new Android.Graphics.Color(0, 0, 0, 0);
-        Android.Graphics.Color backgroundColor;
+        private readonly Android.Graphics.Color _originalBackgroundColor = new Android.Graphics.Color(0, 0, 0, 0);
+        private Android.Graphics.Color _backgroundColor;
 
         protected override void OnAttached()
         {
             try
             {
-                backgroundColor = Android.Graphics.Color.LightGreen;
-                Control.SetBackgroundColor(backgroundColor);
+                _backgroundColor = Android.Graphics.Color.LightGreen;
+                Control.SetBackgroundColor(_backgroundColor);
                 Control.TooltipText = "This is android";
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+                Console.WriteLine("Cannot set property on attached control. Error: {0}", ex.Message);
             }
         }
 
@@ -35,25 +35,19 @@ namespace Day7.Droid.PlatformSpecific
             base.OnElementPropertyChanged(args);
             try
             {
-                if (args.PropertyName == "IsFocused")
+                if (args.PropertyName != "IsFocused") return;
+                Control.SetBackgroundColor(
+                    (((Android.Graphics.Drawables.ColorDrawable) Control.Background)!).Color == _backgroundColor
+                        ? _originalBackgroundColor
+                        : _backgroundColor);
+                if(Control is FormsEditText entry)
                 {
-                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor)
-                    {
-                        Control.SetBackgroundColor(originalBackgroundColor);
-                    }
-                    else
-                    {
-                        Control.SetBackgroundColor(backgroundColor);
-                    }
-                    if(Control is FormsEditText)
-                    {
-                        (Control as FormsEditText).Text = "Eres pobre";
-                    }
+                    entry.Text = "This is android";
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+                Console.WriteLine("Cannot set property on attached control. Error: {0}", ex.Message);
             }
         }
     }

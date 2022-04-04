@@ -2,36 +2,36 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Name="this"
+    x:Name="This"
     x:Class="Day7.Pages.TapGesturePage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="15" Padding="20">
-                <Label Text="Descripcion" FontSize="Title" FontAttributes="Bold" />
-                <Label Text="Los Tap Gestures son usados para identificar cuando el usuario hace Tap en algun elemento de Xamarin Forms. Esto nos permite extender ciertas funcionalides o efectos visuales en nuestro UI."
+                <Label Text="Description" FontSize="Title" FontAttributes="Bold" />
+                <Label Text="Tap Gestures are used to identify when a user taps an element in Xamarin Forms. This allow us to extend some functionalities or visual effects in the UI." 
                        FontSize="Small" />
-                <Label Text="Ejemplo 1" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Generalmente se usa en elementos que no poseen un evento Clicked pero no se limita unicamente a esto."
+                <Label Text="Sample 1" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="In general, We can use it for elements that does not posses a Clicked event"
                        FontSize="Small" />
-                <Label x:Name="label1" FontSize="Subtitle" Text="He sido presionado 0 veces">
+                <Label x:Name="Label1" FontSize="Subtitle" Text="I have been tapped 0 times">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTappedLabel1" />
                     </Label.GestureRecognizers>
                 </Label>
-                <Label Text="Ejemplo 2" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Tambien podemos definir que el evento Tapped o el Command se ejecute luego de una cantidad de Taps"
+                <Label Text="Sample 2" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="We can also defined a tapped or command to be executed after the user taps an specific number of times."
                        FontSize="Small" />
-                <Label x:Name="label2" FontSize="Subtitle" Text="He sido ejecutado 0 veces despues de 2 taps">
+                <Label x:Name="Label2" FontSize="Subtitle" Text="I have been executed 0 times after 2 taps">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnTappedLabel2" />
                     </Label.GestureRecognizers>
                 </Label>
-                <Label Text="Ejemplo 3" FontSize="Subtitle" FontAttributes="Bold" />
-                <Label Text="Hablando de Commands. Podemos hacer Binding de un Command en nuestro ViewModel/Model"
+                <Label Text="Sample 3" FontSize="Subtitle" FontAttributes="Bold" />
+                <Label Text="Talking about command, We can bind the command property from the TapGestureRecognizer to our ViewModel"
                        FontSize="Small" />
                 <Label FontSize="Subtitle" Text="Tap me!">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Command, Source={x:Reference this}}" />
+                        <TapGestureRecognizer Command="{Binding Command, Source={x:Reference This}}" />
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>

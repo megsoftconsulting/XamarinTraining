@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Day7.MainPage">
     <StackLayout Padding="20" Spacing="15">
         <Label Text="Triggers" FontAttributes="Bold" FontSize="Subtitle" />
-        <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Seccion" Clicked="Triggers_Clicked" />
+        <Button BackgroundColor="Gray" TextColor="White" Text="Go to section" Clicked="Triggers_Clicked" />
         <Label Text="Gesture Recognizers" FontAttributes="Bold" FontSize="Subtitle" />
-        <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Seccion" Clicked="Gestures_Clicked" />
+        <Button BackgroundColor="Gray" TextColor="White" Text="Go to section" Clicked="Gestures_Clicked" />
         <Label Text="Effects" FontAttributes="Bold" FontSize="Subtitle" />
-        <Button BackgroundColor="Gray" TextColor="White" Text="Ir a Seccion" Clicked="Effects_Clicked" />
+        <Button BackgroundColor="Gray" TextColor="White" Text="Go to section" Clicked="Effects_Clicked" />
     </StackLayout>
 </ContentPage>

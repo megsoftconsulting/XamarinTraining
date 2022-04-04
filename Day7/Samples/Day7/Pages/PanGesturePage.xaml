@@ -5,7 +5,7 @@
     x:Class="Day7.Pages.PanGesturePage">
     <ContentPage.Content>
         <AbsoluteLayout>
-            <Image x:Name="image" WidthRequest="1024" HeightRequest="768" Source="MonoMonkey.jpg">
+            <Image x:Name="Image" WidthRequest="1024" HeightRequest="768" Source="MonoMonkey.jpg">
             <Image.GestureRecognizers>
                 <PanGestureRecognizer PanUpdated="OnPanUpdated" />
             </Image.GestureRecognizers>

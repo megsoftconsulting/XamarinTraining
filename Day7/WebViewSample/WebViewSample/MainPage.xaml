@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WebViewSample.MainPage">
     <StackLayout>
         <StackLayout Orientation="Horizontal" >
-            <Entry x:Name="tbxDireccion" HorizontalOptions="FillAndExpand" />
+            <Entry x:Name="AddressEntry" HorizontalOptions="FillAndExpand" />
             <Button Text="Go!" Clicked="Handle_Clicked" ></Button>
         </StackLayout>
         <WebView
-            x:Name="myWebBrowser"
-            Source="https://www.universal.com.do/app/Paginas/index.aspx" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+            x:Name="MyWebBrowser"
+            Source="https://megsoftconsulting.com/" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
         </StackLayout>
 </ContentPage>

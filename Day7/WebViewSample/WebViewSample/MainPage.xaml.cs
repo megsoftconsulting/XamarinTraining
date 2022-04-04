@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 
 namespace WebViewSample
@@ -13,18 +10,27 @@ namespace WebViewSample
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public void Handle_Clicked(object sender, EventArgs e)
-        {
-            if(!tbxDireccion.Text.StartsWith("https://", StringComparison.CurrentCulture))
-            {
-                tbxDireccion.Text = "https://"+tbxDireccion.Text;
-            }
-            myWebBrowser.Source = tbxDireccion.Text;
-        }
-
         public MainPage()
         {
             InitializeComponent();
+        }
+        
+        private void Handle_Clicked(object sender, EventArgs e)
+        {
+            var url = AddressEntry.Text;
+            if (!Regex.IsMatch(url, @"^https?:\/\/", RegexOptions.IgnoreCase))
+                url = "https://" + url;
+
+            var isUrlValid = Uri.TryCreate(url, UriKind.Absolute, out var resultUri);
+
+            if (isUrlValid)
+            {
+                MyWebBrowser.Source = resultUri.ToString();
+            }
+            else
+            {
+                DisplayAlert("Oh no!", "The address is invalid", "Ok");
+            }
         }
     }
 }
