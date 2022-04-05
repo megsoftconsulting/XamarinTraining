@@ -9,19 +9,26 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20" Spacing="15">
-                <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Text="Behaviors te permiten agregar funcionalidad a los controles de interfaz de usuario sin tene que hacer una subclase de ellos. En vez de eso, la funcionalidad es implementada en un Behavior y aderida al control como si fuera parte de el. Este se hace por medio de un Attached Behavior que es una propiedad static que se adiere a nuestro control como una propiedad mas del control." FontSize="Body" />
-                <Label Text="Ejemplo 1" FontSize="Caption" FontAttributes="Bold" />
-                <Label Text="En este ejemplo, agregamos un behavior que valida si el texto ingrado en el Entry un valor valido Double" FontSize="Body" />
-                <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="true" />
-
+                <Label Text="Description" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Text="Behaviors allows you to add functionality to controls in the user interface without creating a subclass from a control. The behavior functionality is attached to the control like if it's part of it." 
+                       FontSize="Body" />
+                <Label Text="Sample 1" FontSize="Caption" FontAttributes="Bold" />
+                <Label Text="In this sample, We add a behavior tha validates if the value introduced it's a number" 
+                       FontSize="Body" />
+                <Entry Placeholder="Enter a Number" local:NumericValidationBehavior.AttachBehavior="true" />
+                <Label Text="Sample 2" FontSize="Caption" FontAttributes="Bold" />
+                <Label Text="In this sample, We add a behavior that changes the background color if the user writes &quot;root&quot;" 
+                       FontSize="Body" />
                 <Entry>
                     <Entry.Behaviors>
                         <local:MyInputBehavior ErrorColor="Yellow" />
                     </Entry.Behaviors>
                 </Entry>
-                <Label Text="Nota (Avanzado): En aplicaciones avanzadas, un ListView en una arquitectura MVVM no puede comunicarse directamente con nuestro VM debido a que no posee un evento Bindable que nos permita enviar parametros desde la View a nuestro ViewModel. Se ha solucionado esto usando EventToCommandBehavior el cual permite enlazar el evento ItemTapped a nuestro ViewModel. Mas informacion:" FontSize="Small" />
-                <Label Text="Click Aqui para conocer mas sobre este behavior!" FontAttributes="Bold" FontSize="Small">
+                <Label Text="Note (Advanced): In advanced applications, a ListView/CollectionView in a MVVM architecture can't comunicate directly to our ViewModel due to a lack of a bindable event that can allow us to send the parameters We require to send back to our VM.&#x0a;&#x0a;This can be solved using a EventToCommandBehavior that allows to bind a event (like ItemTapped in ListView) to a Command in our VM. More information:" 
+                       FontSize="Small" />
+                <Label Text="Click here to know more about this behavior!" 
+                       FontAttributes="Bold" 
+                       FontSize="Small">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Url_Tapped" />
                     </Label.GestureRecognizers>

@@ -7,23 +7,29 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="20" Spacing="15">
-
-
                 <Label
-                    x:Name="lblDeviceType"
+                    x:Name="LabelDeviceType"
                     FontSize="Large" HorizontalTextAlignment="Center"
                        HorizontalOptions="FillAndExpand"></Label>
 
-
-                <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Text="En ocasiones, Xamarin Forms no provee acceso a todas las API de plataforma que necesitamos. Con Dependency Service podemos hacer una definicion (interfaz) de lo que requerimos" FontSize="Body" />
-                <Label Text="Ejemplo 1" FontAttributes="Bold" FontSize="Caption" />
-                <Label Text="El siguiente ejemplo hara que nuestra interfaz IDevice obtenga la informacion de la orientacion actual del dispositivo. Dependiendo del OS, se ejecutara el codigo correspiente." FontSize="Body" />
-                <Button VerticalOptions="Center" Text="Click me!" BackgroundColor="Gray" TextColor="White" Clicked="Device_Clicked" />
-                <Label Text="Ejemplo 2" FontAttributes="Bold" FontSize="Caption" />
-                <Label Text="El siguiente ejemplo hara podremos abrir el Photo Picker del Device. Tomar en cuenta que podra requerir permisos del usuario." FontSize="Body" />
+                <Label Text="Description" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Text="Sometimes, Xamarin Forms does not provide access to the platform's API that We need. With Dependency Service We can make an interface of what We what to do and make the implementation on each platform."
+                       FontSize="Body" />
+                <Label Text="Sample 1" FontAttributes="Bold" FontSize="Caption" />
+                <Label Text="In the following sample, our interface IDevice will get the current orientation of the device. Depending of the OS, the corresponding IDevice implementation will run."
+                       FontSize="Body" />
+                <Button VerticalOptions="Center" 
+                        Text="Click me!" 
+                        BackgroundColor="Gray" 
+                        TextColor="White" 
+                        Clicked="Device_Clicked" />
+                <Label Text="Sample 2" 
+                       FontAttributes="Bold" 
+                       FontSize="Caption" />
+                <Label Text="The following sample We can open the Photo Picker. Take in count that this might need the user's permission." 
+                       FontSize="Body" />
                 <Button VerticalOptions="Center" Text="Click me!" BackgroundColor="Gray" TextColor="White" Clicked="Picker_Clicked" />
-                <Image x:Name="image" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="200" />
+                <Image x:Name="Image" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="200" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

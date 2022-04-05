@@ -12,7 +12,7 @@ namespace Day8.Droid.Dependencies
 
         public string GetDeviceType()
         {
-            return "Yo soy Android";
+            return "Hi! This device is Android";
         }
     }
 }

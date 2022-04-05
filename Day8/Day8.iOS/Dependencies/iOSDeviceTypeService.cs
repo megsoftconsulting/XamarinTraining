@@ -10,7 +10,7 @@ namespace Day8.iOS.Dependencies
     {
         public string GetDeviceType()
         {
-            return "Yo soy Apple";
+            return "Hi! This device is Apple";
         }
     }
 }

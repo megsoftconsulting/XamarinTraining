@@ -7,16 +7,16 @@
              x:Class="Day8.Pages.CustomRenderersPage">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="15">
-            <Label Text="Descripcion" FontAttributes="Bold" FontSize="Subtitle" />
-            <Label Text="Un Custom Renderer es una implmentacion custom de un elemento de Xamarin Forms de manera que tienes acceso a personalizar un Control de Xamarin Forms." FontSize="Body" />
-            <Label Text="Un ejemplo simple es modificaar el comportamiento de un Entry:" FontSize="Body" />
+            <Label Text="Description" FontAttributes="Bold" FontSize="Subtitle" />
+            <Label Text="A Custom Renderer is an implementation of a custom element in Xamarin Forms that can be customized on each platform with their native APIs." 
+                   FontSize="Body" />
+            <Label Text="A simple sample is to modify the behavior of a Entry:" 
+                   FontSize="Body" />
             <Entry Placeholder="Un Entry normal" />
 
-            <local:MyEntry Placeholder="Este Entry tiene Color desde el custom Renderer" />
+            <local:MyEntry Placeholder="This entry has a color set from the custom renderer." />
 
-            <local:FlatEntry Placeholder="Esto es un Flat Entry" />
-
-            <local:UniversalButton Text="Login universal" HorizontalOptions="FillAndExpand"></local:UniversalButton>
+            <local:FlatEntry Placeholder="This is a flat enrty" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
