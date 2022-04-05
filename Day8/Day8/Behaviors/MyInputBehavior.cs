@@ -19,12 +19,7 @@ namespace Day8.Behaviors
         private void OnTextChanged(object sender, EventArgs args)
         {
             var obj = (Entry)sender;
-            if (obj.Text == "root")
-            {
-                obj.BackgroundColor = ErrorColor;
-            } else {
-                obj.BackgroundColor = Color.White;
-            }
+            obj.BackgroundColor = obj.Text == "root" ? ErrorColor : Color.White;
         }
     }
 }
