@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MasterPageSample
 {
-    public partial class MainPage : MasterDetailPage
+    public partial class MainPage : FlyoutPage
     {
         public MainPage()
         {
