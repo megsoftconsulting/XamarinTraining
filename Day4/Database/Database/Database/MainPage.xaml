@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Database.Models;assembly=Database"
+             x:Class="Database.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add +" IconImageSource="plus.png" Clicked="Handle_Clicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView x:Name="ListTodoItems" ItemTapped="OnListItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:TodoItem">
+                    <ViewCell>
+                        <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
