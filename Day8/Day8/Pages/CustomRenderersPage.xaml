@@ -16,7 +16,7 @@
 
             <local:MyEntry Placeholder="This entry has a color set from the custom renderer." />
 
-            <local:FlatEntry Placeholder="This is a flat enrty" />
+            <local:FlatEntry Placeholder="This is a flat entry" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
