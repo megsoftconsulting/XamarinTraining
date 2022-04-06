@@ -5,12 +5,12 @@
         <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
         <ProductVersion>8.0.30703</ProductVersion>
         <SchemaVersion>2.0</SchemaVersion>
-        <ProjectGuid>{E96E1B3E-C748-4807-9650-AECB73279ECE}</ProjectGuid>
+        <ProjectGuid>{FB61CCA0-D2D7-4ED0-B5D1-53957D22B7F6}</ProjectGuid>
         <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
         <OutputType>Exe</OutputType>
-        <RootNamespace>Database.iOS</RootNamespace>
+        <RootNamespace>WeatherApp.iOS</RootNamespace>
         <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <AssemblyName>Database.iOS</AssemblyName>
+        <AssemblyName>WeatherApp.iOS</AssemblyName>
         <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -106,19 +106,14 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Plugin.Toast" Version="2.2.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Database\Database.csproj">
-            <Project>{A8CC8C21-28B1-4E57-8A78-85748EBB0C33}</Project>
-            <Name>Database</Name>
+        <ProjectReference Include="..\WeatherApp\WeatherApp.csproj">
+            <Project>{B764EE62-EB23-40C8-9814-1E8713B6A121}</Project>
+            <Name>WeatherApp</Name>
         </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-      <BundleResource Include="Resources\check.png" />
-      <BundleResource Include="Resources\Icon.png" />
-      <BundleResource Include="Resources\plus.png" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
