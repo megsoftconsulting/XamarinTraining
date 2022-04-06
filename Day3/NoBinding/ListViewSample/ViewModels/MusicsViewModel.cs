@@ -1,59 +1,56 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using ListViewSample.Models;
-using ListViewSample.Views;
-using Xamarin.Forms;
 
 namespace ListViewSample.ViewModels
 {
     public class MusicsViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Musics> Musics { get; set; } 
+        public ObservableCollection<Musics> Musics { get; set; }
 
         public MusicsViewModel()
         {
-            Musics = new ObservableCollection<Musics> 
+            Musics = new ObservableCollection<Musics>
             {
-                new Musics 
+                new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "Las Abejas",
-                    Description ="Cancion de Juan Luis Guerra"
+                    Picture = "Music",
+                    Name = "Las Abejas",
+                    Description = "A song of Juan Luis Guerra"
                 },
                 new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "Bachata Rosa",
-                    Description = "Cancion de Juan Luis Guerra"
+                    Picture = "Music",
+                    Name = "Bachata Rosa",
+                    Description = "A song of Juan Luis Guerra"
                 },
                 new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "Un hombre normal",
-                    Description = "Cancion de Ricardo Montaner 2012"
+                    Picture = "Music",
+                    Name = "Un hombre normal",
+                    Description = "A song ofRicardo Montaner"
                 },
                 new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "La bilirubina Rosa",
-                    Description = "Cancion de Juan Luis Guerra"
+                    Picture = "Music",
+                    Name = "La bilirubina Rosa",
+                    Description = "A song of Juan Luis Guerra"
                 },
                 new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "Minutos",
-                    Description = "Cancion de Ricardo Arjona"
+                    Picture = "Music",
+                    Name = "Minutos",
+                    Description = "A song of Ricardo Arjona"
                 },
                 new Musics
                 {
-                    Picture     = "Music",
-                    Name        = "La cima del cielo",
-                    Description = "Cancion de Ricardo Montaner"
+                    Picture = "Music",
+                    Name = "La cima del cielo",
+                    Description = "A song of Ricardo Montaner"
                 }
-            }; 
-        } 
-        
+            };
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }
