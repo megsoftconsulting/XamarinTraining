@@ -1,5 +1,4 @@
-﻿using System;
-namespace ListViewSample.Models
+﻿namespace ListViewSample.Models
 {
     public class Musics
     { 

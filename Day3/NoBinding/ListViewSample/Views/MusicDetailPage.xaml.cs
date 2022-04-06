@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace ListViewSample.Views
 {
@@ -11,9 +8,9 @@ namespace ListViewSample.Views
         {
             InitializeComponent();
 
-            MusicPicture.Source = picture;
-            lblTitle.Text       = title;
-            lblDescription.Text = description;
+            MusicPicture.Source= picture;
+            LabelTitle.Text = title;
+            LabelDescription.Text = description;
 
         } 
     }
